@@ -67,13 +67,14 @@ const Banner = () => {
                     <div className="flex items-center gap-4 mt-6">
                       <div>
                         <h2 className="text-3xl xl:text-4xl font-semibold">
-                          {data?.productQuantity}
+                          {data?.productQuantity}+
                         </h2>
                         <p className="text-[16px]">High Quality Products</p>
                       </div>
+                      <div className="border border-gray-200 h-[74px]"></div>
                       <div>
                         <h2 className="text-3xl xl:text-4xl font-semibold">
-                          {data?.productQuantity}
+                          {data?.customerQuantity}+
                         </h2>
                         <p className="text-[16px]">Happy Costumers</p>
                       </div>

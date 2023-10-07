@@ -9,8 +9,8 @@ const Home = () => {
         <div>
             <Banner />
             <FeaturedProducts />
-            {/* <ApplicationForm /> */}
-            {/* <Newsletter /> */}
+            <ApplicationForm />
+            <Newsletter />
         </div>
     );
 };

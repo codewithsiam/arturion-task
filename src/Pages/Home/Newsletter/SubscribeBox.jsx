@@ -12,7 +12,7 @@ const SubscribeBox = () => {
         <div className="border border-gray-300 h-10"></div>
         <button
           type="submit"
-          className="text-gray-500 py-2 px-4 rounded-r-md hover:bg-blue-100 focus:outline-none bg-transparent text-[18px]"
+          className="text-gray-500 py-2 px-4 rounded-r-md hover:bg-gray-100 focus:outline-none bg-transparent text-[18px]"
         >
           Subscribe
         </button>
