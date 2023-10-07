@@ -6,11 +6,16 @@ import iconReviews from "../../../../assets/Icons/svg/icon-reviews.svg";
 import iconLogout from "../../../../assets/Icons/svg/icon-logout.svg";
 import iconCart from "../../../../assets/Icons/svg/icon-cart.svg";
 import iconThreeLine from "../../../../assets/Icons/svg/icon-threeline.svg";
-import Cart from "./Cart";
+import Signup from "../../../SignUp/SignUp";
+import Login from "../../../Login/Login";
+import Items from "./Items/Items";
+import Calculations from "./Calculations/Calculations";
 
 const RightIcons = () => {
   const [isOpenProfile, setIsOpenProfile] = useState(false);
   const [isOpenCart, setIsOpenCart] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
 
   const toggleProfileDropdown = () => {
     setIsOpenProfile(!isOpenProfile);
@@ -22,7 +27,6 @@ const RightIcons = () => {
   };
 
   // modal function
-  const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => {
     setIsOpen(true);
@@ -30,12 +34,18 @@ const RightIcons = () => {
 
   const closeModal = () => {
     setIsOpen(false);
+    setIsLogin(false)
   };
 
   const handleOverlayClick = (e) => {
     if (e.target.classList.contains("modal-overlay")) {
       closeModal();
     }
+  };
+
+  // toggole login page and sign up
+  const toggleLoginSignup = () => {
+    setIsLogin(!isLogin);
   };
 
   const menuList = [
@@ -113,13 +123,14 @@ const RightIcons = () => {
         />
         {isOpenCart && (
           <div
-            className="origin-top-right absolute right-0 mt-2 rounded-2xl shadow-2xl  bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10 p-[14px] w-[482px] min-h-[751px] "
+            className="origin-top-right absolute right-0 mt-2 rounded-2xl shadow-2xl  bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10 p-[38px] w-[482px] h-[520px] 2xl:h-[751px] flex flex-col justify-between text-[#282828]"
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="menu-button"
             tabIndex="-1"
           >
-            <Cart />
+            <Items />
+            <Calculations />
           </div>
         )}
       </div>
@@ -136,7 +147,7 @@ const RightIcons = () => {
           className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-80 modal-overlay"
         >
           {/* Modal Content */}
-          <div className="bg-white md:w-5/6 md:h-5/6 2xl:w-[1274px] 2xl:h-[763px] p-6 rounded-lg relative">
+          <div className="bg-white rounded-lg relative md:w-5/6 md:h-5/6 2xl:w-[1274px] 2xl:h-[763px] ">
             {/* Close Button */}
             {/* <button
               onClick={closeModal}
@@ -146,10 +157,7 @@ const RightIcons = () => {
             </button> */}
 
             {/* Modal Content */}
-            <div className="text-center">
-              <h2 className="text-2xl font-semibold mb-4">Modal Content</h2>
-              {/* Add your modal content here */}
-            </div>
+            {isLogin ? <Login /> : <Signup toggleLoginSignup={toggleLoginSignup} />}
           </div>
         </div>
       )}

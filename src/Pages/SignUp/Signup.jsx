@@ -1,72 +1,87 @@
 import React from "react";
-import signupImage from "./signup-image.jpg"; // Import your signup image
+import signupImage from "../../assets/Images/signup-image.png";
+import GoogleIcon from "../../assets/Icons/icon-google.png";
 
-const Signup = () => {
+const Signup = ({ toggleLoginSignup }) => {
+  const handleSignUp = () => {
+    console.log("Sign up button clicked");
+  };
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex gap-[100px] 2xl:gap-[170px] w-full h-full px-[50px] 2xl:px-[100px]">
       {/* Left Side (Image) */}
-      <div className="hidden lg:block w-1/2 bg-cover bg-center" style={{ backgroundImage: `url(${signupImage})` }}></div>
+      <div className="w-1/2 flex justify-center items-center">
+        <img
+          src={signupImage}
+          alt="signup-image"
+          className="h-[400px] w-[400px] 2xl:h-[500px] 2xl:w-[500px] "
+        />
+      </div>
 
       {/* Right Side (Signup Form) */}
-      <div className="w-full lg:w-1/2 p-8 flex flex-col justify-center">
-        <h2 className="text-3xl font-extrabold mb-4">Create an Account</h2>
-        <p className="text-gray-500 mb-8">Enter your details below:</p>
+      <div className="w-1/2 flex flex-col justify-center text-start ">
+        <h2 className="text-[36px] font-medium mb-[10px] 2xl:mb-[24px]">
+          Create an Account
+        </h2>
+        <p className="text-[16px] text-gray-500 mb-[20px] 2xl:mb-[48px]">
+          Enter your details below:
+        </p>
 
         {/* Signup Form */}
-        <form>
-          <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
-              Name
-            </label>
+        <form
+          onSubmit={handleSignUp}
+          className="flex flex-col  gap-[25px] 2xl:gap-[35px]"
+        >
+          <div>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              type="text"
               id="name"
-              type="text"
-              placeholder="Your Name"
+              name="name"
+              className="w-full border-b-2 border-gray-300 bg-transparent focus:outline-none"
+              placeholder="Name"
             />
           </div>
-
-          <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-              Email or Phone Number
-            </label>
+          <div>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="email"
               type="text"
-              placeholder="example@example.com"
+              id="emailPhone"
+              name="emailPhone"
+              className="w-full border-b-2 border-gray-300 bg-transparent focus:outline-none"
+              placeholder="Email or Phone Number"
             />
           </div>
-
-          <div className="mb-6">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
-              Password
-            </label>
+          <div>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="password"
               type="password"
-              placeholder="********"
+              id="password"
+              name="password"
+              className="w-full border-b-2 border-gray-300 bg-transparent focus:outline-none"
+              placeholder="Password"
             />
           </div>
 
-          <button
-            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full mb-4"
-            type="submit"
-          >
-            Sign Up
-          </button>
-
-          <div className="text-center">
-            <button className="bg-white hover:bg-gray-200 text-gray-700 py-2 px-4 rounded-full focus:outline-none focus:shadow-outline mr-4">
-              Sign Up with Google
-              {/* You can add a Google logo here */}
+          <div className="flex flex-col gap-[16px]">
+            <button
+              className="bg-[#DB4444] hover:bg-[#f74848] text-white font-bold py-[10px] 2xl:py-[16px] px-4 rounded focus:outline-none focus:shadow-outline w-full mb-4"
+              type="submit"
+            >
+              Sign Up
             </button>
-          </div>
 
-          <p className="text-gray-600 mt-4">
-            Already have an account? <a className="text-blue-500 hover:underline" href="/login">Log in</a>
-          </p>
+            <div className="text-center">
+              <button className="bg-white hover:bg-gray-200 text-gray-700 py-[10px] 2xl:py-[16px] px-4 rounded w-full focus:outline-none focus:shadow-outline mr-4 flex flex-row justify-center items-center gap-[16px] border ">
+                <img src={GoogleIcon} alt="" /> <p>Sign Up with Google</p>
+              </button>
+            </div>
+            <p className="text-gray-600 mt-4 text-center">
+              Already have an account?{" "}
+              <span
+                onClick={toggleLoginSignup}
+                className="text-[#DB4444] hover:underline ml-3 cursor-pointer"
+              >
+                Log in
+              </span>
+            </p>
+          </div>
         </form>
       </div>
     </div>
