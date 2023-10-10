@@ -5,6 +5,7 @@ import bkashLogo from "../../assets/Icons/paymentMethods/bkash.png";
 import nagadLogo from "../../assets/Icons/paymentMethods/nagad.png";
 import visaLogo from "../../assets/Icons/paymentMethods/visa.png";
 import masterCardLogo from "../../assets/Icons/paymentMethods/master-card.png";
+import CheckedIcon from "../../assets/Icons/svg/icon-checked-sign.svg";
 
 const cartProducts = [
   {
@@ -57,8 +58,25 @@ const PaymentForm = () => {
     setIsCouponApplied(true);
   };
 
-  const handlePlaceOrder = () => {};
+  const handlePlaceOrder = () => {
+    openModal();
+  };
 
+  // modal functionality
+  const [isOpen, setIsOpen] = useState(false);
+  const openModal = () => {
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
+
+  const handleOverlayClick = (e) => {
+    if (e.target.classList.contains("modal-overlay")) {
+      closeModal();
+    }
+  };
   return (
     <div className="flex justify-between mx-[150px]">
       {/* Left Side - User Information */}
@@ -224,7 +242,7 @@ const PaymentForm = () => {
               </div>
             </div>
 
-            <div className="mb-4">
+            <div className="my-4">
               <div className="flex items-center mb-2 justify-between">
                 <div className="flex items-center">
                   <input
@@ -281,11 +299,11 @@ const PaymentForm = () => {
               value={couponCode}
               onChange={(e) => setCouponCode(e.target.value)}
               placeholder="Enter coupon code"
-              className="w-2/3 p-2 border rounded-l outline-none  focus:border-[#DB4444]"
+              className="w-7/12 p-2 border rounded-l outline-none  focus:border-[#DB4444]"
             />
             <button
               onClick={handleApplyCoupon}
-              className="w-1/3 art-bg-primary text-white p-2 rounded"
+              className="w-5/12 art-bg-primary text-white p-2 rounded"
             >
               Apply Coupon
             </button>
@@ -302,6 +320,21 @@ const PaymentForm = () => {
           </button>
         </div>
       </div>
+
+      {/* Modal Overlay */}
+      {isOpen && (
+        <div
+          onClick={handleOverlayClick}
+          className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-80 modal-overlay"
+        >
+          {/* Modal Content */}
+          <div className="bg-white rounded-lg relative w-max h-max py-[50px] px-[100px] md:py-[100px] md:px-[200px]">
+            {/* Modal Content */}
+            <img className="h-[90px] w-[90px]" src={CheckedIcon} alt="" />
+            <p className="font-semibold mt-[20px]">Order Placed</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
