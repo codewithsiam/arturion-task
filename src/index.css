@@ -1,3 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.art-bg-primary {
+  background-color: #df5645;
+}
+
+.art-btn-primary {
+  background-color: #df5645;
+  color: #ffffff;
+}
+
+.art-text-primary {
+  color: #df5645;
+}
+.art-border-primary {
+  border-color: #df5645;
+}
+
+/* you may like slider product card css  */
+.slick-prev:before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: url("./assets/Icons/svg/icon-arrow-left.svg") !important;
+  width: 35px !important;
+  height: 35px !important;
+  background-color: #df5645 !important;
+  background-size: 10px 10px !important;
+  border-radius: 50% !important;
+  padding: 10px;
+  position: absolute !important;
+  right: 100%;
+}
+
+.slick-next:before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: url("./assets/Icons/svg/icon-arrow-right.svg") !important;
+  width: 35px !important;
+  height: 35px !important;
+  background-color: #df5645 !important;
+  background-size: 10px 10px !important;
+  border-radius: 50% !important;
+  padding: 10px;
+  position: absolute;
+  left: 100%;
+}
+
+.art-product-card {
+  width: 93% !important;
+  margin: 10px 10px;
+}

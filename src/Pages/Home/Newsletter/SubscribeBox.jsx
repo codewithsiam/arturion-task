@@ -2,7 +2,7 @@ import React from "react";
 
 const SubscribeBox = () => {
   return (
-    <div className="bg-[#F2F2F2] p-4 w-max md:w-[1150px] mt-[33px]">
+    <div className="bg-[#F2F2F2] md:p-2 2xl:p-4 w-max md:w-[900px] 2xl:w-[1100px] mt-[33px]">
       <div className="flex items-center">
         <input
           type="email"
