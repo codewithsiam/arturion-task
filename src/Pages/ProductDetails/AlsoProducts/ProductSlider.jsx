@@ -93,7 +93,7 @@ const ProductSlider = () => {
             {/* image  */}
             <img
               src={product.image}
-              className="h-[400px] w-[350px] 2xl:h-[450px] 2xl:w-[380px] object-cover rounded-t-md"
+              className="h-[380px] w-[350px] 2xl:h-[450px] 2xl:w-[380px] object-cover rounded-t-md"
               alt="productImage"
             />
             {/* description  */}
