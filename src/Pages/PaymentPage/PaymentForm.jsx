@@ -78,9 +78,9 @@ const PaymentForm = () => {
     }
   };
   return (
-    <div className="flex justify-between mx-[150px]">
+    <div className="flex flex-col md:flex-row justify-between mx-[20px] md:mx-[150px]">
       {/* Left Side - User Information */}
-      <div className="w-1/2 pr-20">
+      <div className="w-full md:w-1/2 md:pr-20">
         <form>
           <div className="mb-4">
             <label htmlFor="firstName" className="block mb-[7px] text-gray-500">
@@ -206,9 +206,9 @@ const PaymentForm = () => {
       </div>
 
       {/* Right Side - Payment Information */}
-      <div className="w-1/2 ">
+      <div className="w-full md:w-1/2 ">
         <div className="h-max bg-white p-[40px] border rounded-md">
-          <div className="pr-[90px]">
+          <div className="md:pr-[90px]">
             {/* Product Row */}
             <div className="mb-4">
               {cartProducts.map((product) => (

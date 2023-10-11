@@ -7,9 +7,9 @@ const Login = () => {
     console.log("Login up button clicked");
   };
   return (
-    <div className="flex gap-[100px] 2xl:gap-[170px] w-full h-full px-[50px] 2xl:px-[100px]">
+    <div className="flex gap-[100px] 2xl:gap-[170px] w-full h-full px-[50px] 2xl:px-[100px] py-8">
       {/* Left Side (Image) */}
-      <div className="w-1/2 flex justify-center items-center">
+      <div className="w-1/2 hidden md:flex justify-center items-center">
         <img
           src={loginImage}
           alt="login-image"
@@ -18,7 +18,7 @@ const Login = () => {
       </div>
 
       {/* Right Side (Login Form) */}
-      <div className="w-1/2 flex flex-col justify-center text-start ">
+      <div className="w-full md:w-1/2 flex flex-col justify-center text-start ">
         <h2 className="text-[28px] 2xl:text-[36px] font-medium mb-[23px] 2xl:mb-[24px]">
           Log in to Exclusive
         </h2>

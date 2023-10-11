@@ -54,3 +54,16 @@
   margin: 10px 10px;
 }
 
+/* responsive for mobile */
+@media (max-width: 768px) {
+  .slick-next:before {
+    display: none;
+  }
+  .slick-prev:before {
+    display: none;
+  }
+  .art-product-card {
+    width: 73% !important;
+    padding: 10px auto !important;
+  }
+}

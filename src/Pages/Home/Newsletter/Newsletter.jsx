@@ -3,7 +3,7 @@ import SubscribeBox from "./SubscribeBox";
 
 const Newsletter = () => {
   return (
-    <div className="w-full mx-auto flex flex-col  justify-center items-center pt-[150px] pb-[100px] bg-white">
+    <div className="w-full mx-auto flex flex-col  justify-center items-center pt-[150px] pb-[100px] bg-white px-4 text-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="50"

@@ -7,18 +7,18 @@ const Signup = ({ toggleLoginSignup }) => {
     console.log("Sign up button clicked");
   };
   return (
-    <div className="flex gap-[100px] 2xl:gap-[170px] w-full h-full px-[50px] 2xl:px-[100px]">
+    <div className="flex gap-[100px] 2xl:gap-[170px] w-full h-full px-[50px] 2xl:px-[100px] py-8">
       {/* Left Side (Image) */}
-      <div className="w-1/2 flex justify-center items-center">
+      <div className="w-1/2 hidden md:flex justify-center items-center">
         <img
           src={signupImage}
           alt="signup-image"
-          className="h-[400px] w-[400px] 2xl:h-[500px] 2xl:w-[500px] "
+          className=" h-[400px] w-[400px] 2xl:h-[500px] 2xl:w-[500px] "
         />
       </div>
 
       {/* Right Side (Signup Form) */}
-      <div className="w-1/2 flex flex-col justify-center text-start ">
+      <div className="w-full md:w-1/2 flex flex-col justify-center text-start ">
         <h2 className="text-[36px] font-medium mb-[10px] 2xl:mb-[24px]">
           Create an Account
         </h2>
@@ -59,7 +59,7 @@ const Signup = ({ toggleLoginSignup }) => {
             />
           </div>
 
-          <div className="flex flex-col gap-[16px]">
+          <div className="flex flex-col  md:gap-[16px]">
             <button
               className="bg-[#DB4444] hover:bg-[#f74848] text-white font-bold py-[10px] 2xl:py-[16px] px-4 rounded focus:outline-none focus:shadow-outline w-full mb-4"
               type="submit"

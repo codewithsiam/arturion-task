@@ -6,7 +6,7 @@ import faceoil from "../../../assets/Products/alsoLike/faceoil.png";
 import iron from "../../../assets/Products/alsoLike/iron.png";
 import perfume from "../../../assets/Products/alsoLike/perfume.png";
 
-// Custom arrow buttons
+
 const ProductSlider = () => {
   const products = [
     {
@@ -30,32 +30,13 @@ const ProductSlider = () => {
       image: faceoil,
       price: 39,
     },
-    {
-      id: 3,
-      name: "Product 3",
-      type: "Essential oil",
-      image: perfume,
-      price: 39,
-    },
-    {
-      id: 3,
-      name: "Product 3",
-      type: "Essential oil",
-      image: faceoil,
-      price: 39,
-    },
-    {
-      id: 3,
-      name: "Product 3",
-      type: "Essential oil",
-      image: iron,
-      price: 39,
-    },
+   
   ];
 
   const settings = {
     speed: 500,
     slidesToShow: 3,
+    infinite: false,
     slidesToScroll: 1,
     responsive: [
       {
@@ -63,23 +44,17 @@ const ProductSlider = () => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-          infinite: true,
+          infinite: false,
           dots: true,
         },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          initialSlide: 1,
+          dots: true,
         },
       },
     ],
@@ -87,13 +62,13 @@ const ProductSlider = () => {
 
   return (
     <div className="w-full">
-      <Slider {...settings}>
+      <Slider {...settings} className="w-[350px] md:w-full mx-auto">
         {products.map((product, index) => (
           <div className="shadow-md rounded-md art-product-card" key={index}>
             {/* image  */}
             <img
               src={product.image}
-              className="h-[380px] w-[350px] 2xl:h-[450px] 2xl:w-[380px] object-cover rounded-t-md"
+              className="h-[270px] w-[300px] 2xl:h-[450px] 2xl:w-[380px] object-cover rounded-t-md"
               alt="productImage"
             />
             {/* description  */}

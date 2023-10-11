@@ -137,7 +137,7 @@ const RightIcons = () => {
       </div>
       {/* menu icon  */}
       {/* to do  */}
-      <button className=" hidden md:flex" onClick={openModal}>
+      <button className=" " onClick={openModal}>
         <img src={iconThreeLine} alt="" />
       </button>
 

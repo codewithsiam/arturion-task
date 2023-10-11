@@ -14,14 +14,14 @@ const ProductDetails = () => {
   };
 
   return (
-    <div className="bg-[#F7F7F7] ">
-      <div className="max-w-5xl mx-auto pb-[100px]">
+    <div className="bg-[#F7F7F7] md:px-0">
+      <div className="max-w-5xl mx-auto pb-[100px] px-3 md:px-14">
         <p className="font-bold py-[60px] 2xl:py-[80px]">
           Home - essential oil
         </p>
-        <div className="flex  md:gap-[100px] 2xl:gap-[140px]  mb-[220px] ">
+        <div className="flex flex-col md:flex-row gap-[20px] md:gap-[100px] 2xl:gap-[140px]  mb-[220px] ">
           {/* left side - photo section */}
-          <div className="flex flex-col items-center text-center w-2/5">
+          <div className="flex flex-col items-center text-center w-full md:w-2/5">
             <div className="w-full max-w-md">
               {/* Big Image */}
               <img
@@ -50,7 +50,7 @@ const ProductDetails = () => {
           </div>
 
           {/* right side - details and add cart section */}
-          <div className="w-3/5 mt-auto">
+          <div className="w-full md:w-3/5 mt-auto">
             <p className="text-gray-500">
               <span className="font-bold mr-2">Brand:</span> {product.brand}
             </p>
