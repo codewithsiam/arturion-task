@@ -4,7 +4,7 @@ import ThreeLine from "../../../../assets/Icons/threeLine.png";
 
 const FilterCard = () => {
     return (
-        <div className="flex flex-row justify-end items-center gap-[10px] my-[75px]">
+        <div className="flex flex-row justify-center md:justify-end items-center gap-[10px] my-[75px]">
         <div>
           <div className="flex flex-row justify-center items-center mb-2 border-2 px-[20px] py-[10px] w-[160px] h-[50px] font-semibold text-[13px]">
             <p className="text-gray-600">Sort By:</p>

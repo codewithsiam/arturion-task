@@ -31,8 +31,8 @@ const Newsletter = () => {
           fill="black"
         />
       </svg>
-      <h1 className="text-gray-800 text-[32px] my-[9px]">SUBSCRIBE TO OUR NEWSLETTER</h1>
-      <p className="text-black text-[18px]">and receive $20 coupon for yoru first order when you checkout</p>
+      <h1 className="text-gray-800 text-[22px] md:text-[32px] my-[9px]">SUBSCRIBE TO OUR NEWSLETTER</h1>
+      <p className="text-black text-[14px] md:text-[18px]">and receive $20 coupon for yoru first order when you checkout</p>
       <SubscribeBox />
     </div>
   );

@@ -5,7 +5,7 @@ const ProfileForm = () => {
   return (
     <div className="flex flex-col md:flex-row-reverse  items-center md:items-start">
       {/* Left Side with Photo */}
-      <div className="md:w-1/2 md:order-2 p-4">
+      <div className="w-[350px] md:w-1/2 md:order-2 p-4">
         <img
           src={applicationImage}
           alt="Profile Photo"
@@ -14,7 +14,7 @@ const ProfileForm = () => {
       </div>
 
       {/* Right Side with Form */}
-      <div className="md:w-1/2 md:order-1 p-4">
+      <div className="w-full md:w-1/2 md:order-1 p-4">
         <form className="flex flex-col gap-[46px] w-full max-w-md mx-auto">
         <h3 className="font-semibold text-black">Fill the Application </h3>
           {/* Name */}

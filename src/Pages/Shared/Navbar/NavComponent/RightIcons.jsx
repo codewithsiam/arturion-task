@@ -34,7 +34,7 @@ const RightIcons = () => {
 
   const closeModal = () => {
     setIsOpen(false);
-    setIsLogin(false)
+    setIsLogin(false);
   };
 
   const handleOverlayClick = (e) => {
@@ -81,15 +81,16 @@ const RightIcons = () => {
       <div className="relative inline-block text-left">
         <img
           type="button"
-          className="group rounded-full cursor-pointer h-[36px] w-[36px] object-cover border border-black"
+          className="group rounded-full cursor-pointer h-[36px] w-[36px] object-cover border border-black mt-2 md:mt-0"
           onClick={toggleProfileDropdown}
           src={profilePhoto}
           alt=""
         />
+        
 
         {isOpenProfile && (
           <div
-            className="origin-top-right absolute right-0 mt-2 w-56 rounded-2xl shadow-2xl  bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10 p-[14px]"
+            className="origin-top-right absolute md:right-0 mt-2 w-56 rounded-2xl shadow-2xl  bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10 p-[14px]"
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="menu-button"
@@ -113,7 +114,7 @@ const RightIcons = () => {
         )}
       </div>
       {/* cart icon  */}
-      <div className="relative inline-block text-left">
+      <div className="hidden md:block relative text-left">
         <img
           type="button"
           className="group rounded-md cursor-pointer"
@@ -136,7 +137,7 @@ const RightIcons = () => {
       </div>
       {/* menu icon  */}
       {/* to do  */}
-      <button className="flex" onClick={openModal}>
+      <button className=" hidden md:flex" onClick={openModal}>
         <img src={iconThreeLine} alt="" />
       </button>
 
@@ -157,7 +158,11 @@ const RightIcons = () => {
             </button> */}
 
             {/* Modal Content */}
-            {isLogin ? <Login /> : <Signup toggleLoginSignup={toggleLoginSignup} />}
+            {isLogin ? (
+              <Login />
+            ) : (
+              <Signup toggleLoginSignup={toggleLoginSignup} />
+            )}
           </div>
         </div>
       )}

@@ -66,7 +66,7 @@ const Menu = () => {
   ];
 
   return (
-    <div className="flex flex-row md:gap-[30px] 2xl:gap-[85px] md:ml-[40px] 2xl:ml-[86px] md:mr-[30px] 2xl:mr-[71px]">
+    <div className="flex flex-col md:flex-row md:gap-[30px] 2xl:gap-[85px] md:ml-[40px] 2xl:ml-[86px] md:mr-[30px] 2xl:mr-[71px] mt-7 md:mt-0">
       <p
         type="button"
         className="group rounded-md p-2 inline-flex items-center text-base font-medium text-gray-700 hover:text-black cursor-pointer text-[16px]"
